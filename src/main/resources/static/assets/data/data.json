@@ -1,0 +1,29 @@
+{
+    "encabezado": {
+        "logoArgProg": "https://yt3.ggpht.com/a/AATXAJxNPssfliRemIzHl55K9Ra6foSD3_cb-Vti=s900-c-k-c0xffffffff-no-rj-mo"
+    },
+    "nombre": "Dario Plácido Gandini",
+    "titulo": "Programador Web Fullstack Jr",
+    "experiencia": {
+        "organizacion": "CHE3D S.R.L",
+        "periodo": "Octubre del 2017 a Mayo del 2020",
+        "img": "https://yt3.ggpht.com/a/AATXAJz6iS_R3MsBJIlq_ZCtKfKCr2zQheDCQQTLig=s900-c-k-c0xffffffff-no-rj-mo"
+    },
+    "educacion": [
+        {
+            "institucion": "Ministerio de Desarrollo Productivo",
+            "titulo": "Argentina Programa - #Yo Programo",
+            "img": "https://media-exp1.licdn.com/dms/image/C4D0BAQGkPdmNWKqVgw/company-logo_200_200/0/1626788914872?e=1654732800&v=beta&t=2DY8kolOV6MDM8Z8vlzoAJ5qDeZnZJ-tJrB9X5ffTYs"
+        },
+        {
+            "institucion": "Instituto Económico Nacional",
+            "titulo": "Desarrollo Web",
+            "img": "https://th.bing.com/th/id/OIP.zU3pxZpqVGNFViU29EeJigHaHa?pid=ImgDet&rs=1"
+        },
+        {
+            "institucion": "Centro de E-Learning UTN FRBA",
+            "titulo": "Diplomatura en Programación Java",
+            "img": "https://yt3.ggpht.com/a/AATXAJwN8jCrZ6cId6bzB-5P2J6tDi5wHIZJ2ufRnA=s900-c-k-c0xffffffff-no-rj-mo"
+        }
+    ]
+}
