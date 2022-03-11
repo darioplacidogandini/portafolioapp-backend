@@ -1,6 +1,6 @@
 {
     "encabezado": {
-        "logoArgProg": "https://yt3.ggpht.com/a/AATXAJxNPssfliRemIzHl55K9Ra6foSD3_cb-Vti=s900-c-k-c0xffffffff-no-rj-mo"
+        "logoArgProg": "https://yt3.ggpht.com/9upo5zbtXzvItj8IMHF1X9hI95x4YOeGCApLk1DhMQCHftmJvf2GWmbJXrC1TKCrn-AyQ2txBw=s176-c-k-c0x00ffffff-no-rj"
     },
     "nombre": "Dario Plácido Gandini",
     "titulo": "Programador Web Fullstack Jr",
@@ -12,7 +12,7 @@
     "educacion": [
         {
             "institucion": "Ministerio de Desarrollo Productivo",
-            "titulo": "Argentina Programa - #Yo Programo",
+            "titulo": "Argentina Programa - #Sé Programar",
             "img": "https://media-exp1.licdn.com/dms/image/C4D0BAQGkPdmNWKqVgw/company-logo_200_200/0/1626788914872?e=1654732800&v=beta&t=2DY8kolOV6MDM8Z8vlzoAJ5qDeZnZJ-tJrB9X5ffTYs"
         },
         {
@@ -24,6 +24,27 @@
             "institucion": "Centro de E-Learning UTN FRBA",
             "titulo": "Diplomatura en Programación Java",
             "img": "https://yt3.ggpht.com/a/AATXAJwN8jCrZ6cId6bzB-5P2J6tDi5wHIZJ2ufRnA=s900-c-k-c0xffffffff-no-rj-mo"
+        }
+    ],
+    "skills": [
+        {
+            "skill": "HTML",
+            "porcentaje": "75%"
+        },
+        {
+            "skill": "Bootstrap",
+            "porcentaje": "60%"
+        },
+        {
+            "skill": "Ingles",
+            "porcentaje": "80%"
+        }
+    ],
+    "proyectos": [
+        {
+            "nombre": "Calculadora",
+            "descripcion": "Calculadora Web hecha con Bootstrap",
+            "url": "https://darioplacidogandini.github.io/Calculadora/"
         }
     ]
 }
