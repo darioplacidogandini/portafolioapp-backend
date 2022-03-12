@@ -2,8 +2,12 @@
     "encabezado": {
         "logoArgProg": "https://yt3.ggpht.com/9upo5zbtXzvItj8IMHF1X9hI95x4YOeGCApLk1DhMQCHftmJvf2GWmbJXrC1TKCrn-AyQ2txBw=s176-c-k-c0x00ffffff-no-rj"
     },
-    "nombre": "Dario Plácido Gandini",
-    "titulo": "Programador Web Fullstack Jr",
+    "acercaDe": {
+            "nombre": "Dario Plácido Gandini",
+            "titulo": "Programador Web Fullstack Jr",
+            "fotoPerfil": "https://media-exp1.licdn.com/dms/image/C5603AQHilFT_DWyjdw/profile-displayphoto-shrink_200_200/0/1517033685380?e=1652313600&v=beta&t=8BK3Jd3ZktkcuXtnyDAO8QLOmODNE_6-5Sez1q6PssM",
+            "banner": "https://images.unsplash.com/photo-1556244573-c3686c0f0e78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+    },
     "experiencia": [
         {
         "organizacion": "CHE3D S.R.L",
