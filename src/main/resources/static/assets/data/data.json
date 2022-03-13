@@ -1,35 +1,44 @@
 {
-    "encabezado": {
-        "logoArgProg": "https://yt3.ggpht.com/9upo5zbtXzvItj8IMHF1X9hI95x4YOeGCApLk1DhMQCHftmJvf2GWmbJXrC1TKCrn-AyQ2txBw=s176-c-k-c0x00ffffff-no-rj"
-    },
-    "acercaDe": {
+    "header": [
+        {
+            "logoArgProg": "https://yt3.ggpht.com/9upo5zbtXzvItj8IMHF1X9hI95x4YOeGCApLk1DhMQCHftmJvf2GWmbJXrC1TKCrn-AyQ2txBw=s176-c-k-c0x00ffffff-no-rj",
+            "header": "Logo Argentina Programa"
+        }
+    ],
+    "acercaDe": [
+        {
             "nombre": "Dario Plácido Gandini",
             "titulo": "Programador Web Fullstack Jr",
             "fotoPerfil": "https://media-exp1.licdn.com/dms/image/C5603AQHilFT_DWyjdw/profile-displayphoto-shrink_200_200/0/1517033685380?e=1652313600&v=beta&t=8BK3Jd3ZktkcuXtnyDAO8QLOmODNE_6-5Sez1q6PssM",
-            "banner": "https://images.unsplash.com/photo-1556244573-c3686c0f0e78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-    },
-    "experiencia": [
+            "banner": "https://images.unsplash.com/photo-1556244573-c3686c0f0e78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" 
+        }
+    ],
+   "experiencia": [
         {
-        "organizacion": "CHE3D S.R.L",
-        "periodo": "Octubre del 2017 a Mayo del 2020",
-        "img": "https://yt3.ggpht.com/a/AATXAJz6iS_R3MsBJIlq_ZCtKfKCr2zQheDCQQTLig=s900-c-k-c0xffffffff-no-rj-mo"
+            "organizacion": "CHE3D S.R.L",
+            "periodo": "Octubre del 2017 a Mayo del 2020",
+            "img": "https://yt3.ggpht.com/a/AATXAJz6iS_R3MsBJIlq_ZCtKfKCr2zQheDCQQTLig=s900-c-k-c0xffffffff-no-rj-mo",
+            "alt": "Logo CHE3D"
         }
     ],
     "educacion": [
         {
             "institucion": "Ministerio de Desarrollo Productivo",
             "titulo": "Argentina Programa - #Sé Programar",
-            "img": "https://media-exp1.licdn.com/dms/image/C4D0BAQGkPdmNWKqVgw/company-logo_200_200/0/1626788914872?e=1654732800&v=beta&t=2DY8kolOV6MDM8Z8vlzoAJ5qDeZnZJ-tJrB9X5ffTYs"
+            "img": "https://media-exp1.licdn.com/dms/image/C4D0BAQGkPdmNWKqVgw/company-logo_200_200/0/1626788914872?e=1654732800&v=beta&t=2DY8kolOV6MDM8Z8vlzoAJ5qDeZnZJ-tJrB9X5ffTYs",
+            "alt": "Logo Ministerio de Desarrollo Productivo"
         },
         {
             "institucion": "Instituto Económico Nacional",
             "titulo": "Desarrollo Web",
-            "img": "https://th.bing.com/th/id/OIP.zU3pxZpqVGNFViU29EeJigHaHa?pid=ImgDet&rs=1"
+            "img": "https://th.bing.com/th/id/OIP.zU3pxZpqVGNFViU29EeJigHaHa?pid=ImgDet&rs=1",
+            "alt": "Logo Instituto Económico Nacional"
         },
         {
             "institucion": "Centro de E-Learning UTN FRBA",
             "titulo": "Diplomatura en Programación Java",
-            "img": "https://yt3.ggpht.com/a/AATXAJwN8jCrZ6cId6bzB-5P2J6tDi5wHIZJ2ufRnA=s900-c-k-c0xffffffff-no-rj-mo"
+            "img": "https://yt3.ggpht.com/a/AATXAJwN8jCrZ6cId6bzB-5P2J6tDi5wHIZJ2ufRnA=s900-c-k-c0xffffffff-no-rj-mo",
+            "alt": "Logo Centro de E-Learning UTN FRBA"
         }
     ],
     "skills": [
