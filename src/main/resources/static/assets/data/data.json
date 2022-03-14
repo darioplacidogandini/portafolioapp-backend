@@ -16,7 +16,8 @@
    "experiencia": [
         {
             "organizacion": "CHE3D S.R.L",
-            "periodo": "Octubre del 2017 a Mayo del 2020",
+            "inicio": "Octubre del 2017",
+            "fin": "Mayo del 2020",
             "img": "https://yt3.ggpht.com/a/AATXAJz6iS_R3MsBJIlq_ZCtKfKCr2zQheDCQQTLig=s900-c-k-c0xffffffff-no-rj-mo",
             "alt": "Logo CHE3D"
         }
@@ -25,18 +26,24 @@
         {
             "institucion": "Ministerio de Desarrollo Productivo",
             "titulo": "Argentina Programa - #Sé Programar",
+            "duracion": "60",
+            "fecha": "Diciembre del 2021",
             "img": "https://media-exp1.licdn.com/dms/image/C4D0BAQGkPdmNWKqVgw/company-logo_200_200/0/1626788914872?e=1654732800&v=beta&t=2DY8kolOV6MDM8Z8vlzoAJ5qDeZnZJ-tJrB9X5ffTYs",
             "alt": "Logo Ministerio de Desarrollo Productivo"
         },
         {
             "institucion": "Instituto Económico Nacional",
             "titulo": "Desarrollo Web",
+            "duracion": "48",
+            "fecha": "Diciembre del 2021",
             "img": "https://th.bing.com/th/id/OIP.zU3pxZpqVGNFViU29EeJigHaHa?pid=ImgDet&rs=1",
             "alt": "Logo Instituto Económico Nacional"
         },
         {
             "institucion": "Centro de E-Learning UTN FRBA",
             "titulo": "Diplomatura en Programación Java",
+            "duracion": "105",
+            "fecha": "Diciembre del 2015",
             "img": "https://yt3.ggpht.com/a/AATXAJwN8jCrZ6cId6bzB-5P2J6tDi5wHIZJ2ufRnA=s900-c-k-c0xffffffff-no-rj-mo",
             "alt": "Logo Centro de E-Learning UTN FRBA"
         }
