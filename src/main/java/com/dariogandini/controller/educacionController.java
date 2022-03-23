@@ -35,7 +35,7 @@ public class educacionController {
     @DeleteMapping("/educacion/borrar/{id}")
     public String eliminarEducacion (@PathVariable Long id) {
         interEdu.deleteEducacion(id);
-        return "Educacion eliminads correctamente";
+        return "Educacion eliminada correctamente";
     }
 
     @PutMapping ("/educacion/editar/{id}")
