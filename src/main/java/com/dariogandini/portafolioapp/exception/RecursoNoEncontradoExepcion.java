@@ -1,4 +1,4 @@
-package com.dariogandini.exception;
+package com.dariogandini.portafolioapp.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

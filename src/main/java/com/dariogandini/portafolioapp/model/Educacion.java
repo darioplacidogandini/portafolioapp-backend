@@ -1,4 +1,4 @@
-package com.dariogandini.model;
+package com.dariogandini.portafolioapp.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

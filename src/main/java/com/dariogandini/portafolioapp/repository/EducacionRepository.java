@@ -1,6 +1,6 @@
-package com.dariogandini.repository;
+package com.dariogandini.portafolioapp.repository;
 
-import com.dariogandini.model.Educacion;
+import com.dariogandini.portafolioapp.model.Educacion;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

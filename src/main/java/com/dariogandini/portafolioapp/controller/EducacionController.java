@@ -1,12 +1,12 @@
-package com.dariogandini.controller;
+package com.dariogandini.portafolioapp.controller;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.dariogandini.exception.RecursoNoEncontradoExepcion;
-import com.dariogandini.model.Educacion;
-import com.dariogandini.repository.EducacionRepository;
+import com.dariogandini.portafolioapp.exception.RecursoNoEncontradoExepcion;
+import com.dariogandini.portafolioapp.model.Educacion;
+import com.dariogandini.portafolioapp.repository.EducacionRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
