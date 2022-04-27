@@ -25,7 +25,7 @@ public class PortafolioappApplication {
 		protected void configure(HttpSecurity http) throws Exception {
 			http.csrf().disable().
 			addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class).
-			authorizeRequests().antMatchers(HttpMethod.POST, "/iniciar-sesion").permitAll().
+			authorizeRequests().antMatchers( "/","/iniciar-sesion").permitAll().
 			anyRequest().authenticated();
 		}
 	}
