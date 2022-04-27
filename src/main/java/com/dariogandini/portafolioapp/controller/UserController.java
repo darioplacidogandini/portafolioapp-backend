@@ -17,7 +17,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 @RestController
 public class UserController {
-    @PostMapping("user")
+    @PostMapping("iniciar-sesion")
     public User login(@RequestParam("user") String username, @RequestParam("password") String psw) {
         String token = getJWToken(username);
         User user = new User();
