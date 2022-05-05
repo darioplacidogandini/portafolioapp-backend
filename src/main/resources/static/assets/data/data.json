@@ -37,7 +37,7 @@
             "titulo": "Desarrollo Web",
             "duracion": "48",
             "fecha": "Diciembre del 2021",
-            "img": "https://th.bing.com/th/id/OIP.zU3pxZpqVGNFViU29EeJigHaHa?pid=ImgDet&rs=1",
+            "img": "https://4.bp.blogspot.com/-4KcZ51muq7E/XnKSAgdlRUI/AAAAAAAAABc/wwsR2EyQSeAeob8kro7oz_KONCSzfBpiACK4BGAYYCw/s113/isologo-07.png",
             "alt": "Logo Instituto Económico Nacional"
         },
         {
@@ -67,7 +67,9 @@
         {
             "nombre": "Calculadora",
             "descripcion": "Calculadora Web hecha con Bootstrap",
-            "url": "https://darioplacidogandini.github.io/Calculadora/"
+            "url": "https://darioplacidogandini.github.io/Calculadora/",
+            "img": "https://static.vecteezy.com/system/resources/previews/000/356/498/original/vector-calculator-icon.jpg",
+            "alt": "Logo proyecto Calculadora"
         }
     ]
 }
