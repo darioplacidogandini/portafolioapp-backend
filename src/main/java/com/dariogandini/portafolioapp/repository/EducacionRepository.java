@@ -10,5 +10,5 @@ import com.dariogandini.portafolioapp.model.Educacion;
 @Repository
 public interface EducacionRepository extends JpaRepository<Educacion, String> {
 
-    List<Educacion> findAllByTitleContaining(String title);
+    List<Educacion> findAllByTitleContaining(String titulo);
 }
