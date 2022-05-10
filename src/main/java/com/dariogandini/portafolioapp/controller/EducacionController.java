@@ -34,9 +34,9 @@ public class EducacionController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Educacion> post(@PathVariable String id) {
-        Optional<Educacion> post = educacionService.findById(id);
-        return post.map(ResponseEntity::ok)
+    public ResponseEntity<Educacion> ed(@PathVariable String id) {
+        Optional<Educacion> ed = educacionService.findById(id);
+        return ed.map(ResponseEntity::ok)
                    .orElseGet(() -> ResponseEntity.notFound()
                                                   .build());
     }
@@ -46,7 +46,7 @@ public class EducacionController {
         if (!StringUtils.hasText(titulo)) {
             return educacionService.getAll();
         }
-        return educacionService.findByTitle(titulo);
+        return educacionService.findByTitulo(titulo);
     }
 
     @PostMapping
@@ -56,8 +56,8 @@ public class EducacionController {
 
     @PutMapping("{id}")
     public void update(@PathVariable String id, @RequestBody EducacionRequest request) {
-        Optional<Educacion> post = educacionService.findById(id);
-        if (post.isPresent()) {
+        Optional<Educacion> ed = educacionService.findById(id);
+        if (ed.isPresent()) {
             educacionService.update(id, request);
         } else {
             educacionService.save(request);

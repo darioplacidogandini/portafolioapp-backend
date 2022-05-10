@@ -32,9 +32,9 @@ public class EducacionService {
     }
 
     public void update(String id, EducacionRequest request) {
-        Optional<Educacion> post = findById(id);
-        if (post.isPresent()) {
-            Educacion forUpdate = post.get();
+        Optional<Educacion> ed = findById(id);
+        if (ed.isPresent()) {
+            Educacion forUpdate = ed.get();
             forUpdate.setTitulo(request.getTitulo());
             forUpdate.setInstitucion(request.getInstitucion());
             educacionRepository.save(forUpdate);
@@ -45,12 +45,12 @@ public class EducacionService {
         return educacionRepository.findAll();
     }
 
-    public List<Educacion> findByTitle(String title) {
-        return educacionRepository.findAllByTitleContaining(title);
+    public List<Educacion> findByTitulo(String titulo) {
+        return educacionRepository.findAllByTituloContaining(titulo);
     }
 
     public void delete(String id) {
-        Optional<Educacion> post = findById(id);
-        post.ifPresent(educacionRepository::delete);
+        Optional<Educacion> ed = findById(id);
+        ed.ifPresent(educacionRepository::delete);
     }
 }
