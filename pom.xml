@@ -9,9 +9,9 @@
 		<relativePath/> 
 	</parent>
 	<groupId>com.dariogandini</groupId>
-	<artifactId>portafolioapp</artifactId>
+	<artifactId>portfolio</artifactId>
 	<version>0.1</version>
-	<name>portafolioapp</name>
+	<name>portfolio</name>
 	<description>Proyecto Final Arg Programa</description>
 	<properties>
 		<java.version>17</java.version>

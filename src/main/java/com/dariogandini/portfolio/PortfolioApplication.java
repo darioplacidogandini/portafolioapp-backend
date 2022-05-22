@@ -1,11 +1,12 @@
-package com.dariogandini.portafolioapp;
+package com.dariogandini.portfolio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PortafolioappApplication {
+public class PortfolioApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PortafolioappApplication.class, args);
+		SpringApplication.run(PortfolioApplication.class, args);
 	}
 }
+	
