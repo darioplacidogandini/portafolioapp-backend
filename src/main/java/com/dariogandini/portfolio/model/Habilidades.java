@@ -17,6 +17,10 @@ public class Habilidades {
     private String habilidad;
     private String porcentaje;
 
+    public Habilidades() {
+        
+    }
+
     public Habilidades(String habilidad, String porcentaje) {
         this.habilidad = habilidad;
         this.porcentaje = porcentaje;

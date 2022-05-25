@@ -18,6 +18,10 @@ public class Proyectos {
     private String descripcion;
     private String url;
 
+    public Proyectos() {
+        
+    }
+
     public Proyectos(String nombre, String descripcion, String url) {
         this.nombre = nombre;
         this.descripcion = descripcion;
