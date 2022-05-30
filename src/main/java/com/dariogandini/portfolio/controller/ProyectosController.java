@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "https://dariogandini-portfolio-backend.herokuapp.com")
+@CrossOrigin(origins = "https://dariogandini-portfoliofrontend.firebaseapp.com")
 @RestController
 @RequestMapping("/api/proyectos")
 public class ProyectosController {
