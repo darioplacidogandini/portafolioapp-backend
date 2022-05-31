@@ -17,15 +17,17 @@ public class Proyectos {
     private String nombre;
     private String descripcion;
     private String url;
+    private String logo;
 
     public Proyectos() {
         
     }
 
-    public Proyectos(String nombre, String descripcion, String url) {
+    public Proyectos(String nombre, String descripcion, String url, String logo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.url = url;
+        this.logo = logo;
     }
 
     @Column(name = "id")
@@ -63,5 +65,13 @@ public class Proyectos {
     public void setUrl(String url) {
         this.url = url;
     }
-    
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
 }

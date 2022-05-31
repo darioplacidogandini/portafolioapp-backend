@@ -16,7 +16,7 @@ public class Acerca {
     private long id;
 
     private String foto;
-    private String banner;
+    private String portada;
     private String nombre;
     private String puesto;
 
@@ -24,9 +24,9 @@ public class Acerca {
 
     }
 
-    public Acerca(String foto, String banner, String nombre, String puesto) {
+    public Acerca(String foto, String portada, String nombre, String puesto) {
         this.foto = foto;
-        this.banner = banner;
+        this.portada = portada;
         this.nombre = nombre;
         this.puesto = puesto;
     }
@@ -49,13 +49,13 @@ public class Acerca {
         this.foto = foto;
     }
 
-    @Column(name = "banner")
+    @Column(name = "portada")
     public String getBanner() {
-        return banner;
+        return portada;
     }
 
-    public void setBanner(String banner) {
-        this.banner = banner;
+    public void setBanner(String portada) {
+        this.portada = portada;
     }
 
     @Column(name = "nombre")
