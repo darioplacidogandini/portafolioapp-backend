@@ -50,11 +50,11 @@ public class Acerca {
     }
 
     @Column(name = "portada")
-    public String getBanner() {
+    public String getPortada() {
         return portada;
     }
 
-    public void setBanner(String portada) {
+    public void setPortada(String portada) {
         this.portada = portada;
     }
 
