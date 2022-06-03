@@ -33,6 +33,7 @@ public class EducacionController {
         return educacionRepository.save(educacion);
     }
 
+    @CrossOrigin(origins = {"https://dariogandini-portfoliofrontend.firebaseapp.com","https://dariogandini-portfoliofrontend.web.app"})
     @DeleteMapping("/eliminar/{id}")
     public void eliminar(@PathVariable(value="id") Long educacionId) {
         Educacion educacion = educacionRepository.findById(educacionId).orElse(null);
