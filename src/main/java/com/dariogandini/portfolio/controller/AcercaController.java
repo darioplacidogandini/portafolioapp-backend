@@ -8,8 +8,7 @@ import com.dariogandini.portfolio.repository.AcercaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,9 +25,13 @@ public class AcercaController {
         return acercaRepository.findAll();
     }
 
-    @PostMapping("/editar")
-    public Acerca editar(@RequestBody Acerca acerca) {
-        return acercaRepository.save(acerca);
+    @PutMapping("/editar")
+    public void editar() {
+        Acerca acerca = acercaRepository.findById((long) 1).orElse(null);
+        acerca.setNombre(acerca.getNombre());
+        acerca.setPuesto(acerca.getPuesto());
+        acerca.setFoto(acerca.getFoto());
+        acerca.setPortada(acerca.getPortada());
     }
 
 }
