@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = {"https://dariogandini-portfoliofrontend.firebaseapp.com","https://dariogandini-portfoliofrontend.web.app"},
-                methods = {RequestMethod.PUT})
+                methods = {RequestMethod.GET,RequestMethod.PUT})
 @RestController
 @RequestMapping("/api/acerca")
 public class AcercaController {
