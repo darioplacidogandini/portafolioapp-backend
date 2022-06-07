@@ -7,7 +7,9 @@ import com.dariogandini.portfolio.repository.ProyectosRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +31,12 @@ public class ProyectosController {
     @PostMapping("/agregar")
     public Proyectos agregar(@RequestBody Proyectos proyectos) {
         return proyectosRepository.save(proyectos);
+    }
+
+    @DeleteMapping("/eliminar/{id}")
+    public void eliminar(@PathVariable(value="id") Long proyectosId) {
+        Proyectos proyectos = proyectosRepository.findById(proyectosId).orElse(null);
+        proyectosRepository.delete(proyectos);
     }
     
 }
