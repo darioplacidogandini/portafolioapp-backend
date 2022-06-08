@@ -26,12 +26,13 @@ public class AcercaController {
     }
 
     @PutMapping("/editar")
-    public void editar() {
+    public Acerca editar() {
         Acerca acerca = acercaRepository.findById((long) 1).orElse(null);
         acerca.setNombre(acerca.getNombre());
         acerca.setPuesto(acerca.getPuesto());
         acerca.setFoto(acerca.getFoto());
         acerca.setPortada(acerca.getPortada());
+        return acercaRepository.save(acerca);
     }
 
 }

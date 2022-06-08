@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,8 +34,19 @@ public class ExperienciaController {
         return experienciaRepository.save(experiencia);
     }
 
+    @PutMapping("/editar/{id}")
+    public Experiencia editar(@PathVariable(value = "id") Long experienciaId) {
+        Experiencia experiencia = experienciaRepository.findById(experienciaId).orElse(null);
+        experiencia.setEmpresa(experiencia.getEmpresa());
+        experiencia.setPuesto(experiencia.getPuesto());
+        experiencia.setInicio(experiencia.getInicio());
+        experiencia.setFin(experiencia.getFin());
+        experiencia.setLogo(experiencia.getLogo());
+        return experienciaRepository.save(experiencia);
+    }
+
     @DeleteMapping("/eliminar/{id}")
-    public void eliminar(@PathVariable(value="id") Long experienciaId) {
+    public void eliminar(@PathVariable(value = "id") Long experienciaId) {
         Experiencia experiencia = experienciaRepository.findById(experienciaId).orElse(null);
         experienciaRepository.delete(experiencia);
     }

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,8 +34,16 @@ public class HabilidadesController {
         return habilidadesRepository.save(habilidades);
     }
 
+    @PutMapping("/editar/{id}")
+    public Habilidades editar(@PathVariable(value = "id") Long habilidadesId) {
+        Habilidades habilidades = habilidadesRepository.findById(habilidadesId).orElse(null);
+        habilidades.setHabilidad(habilidades.getHabilidad());
+        habilidades.setPorcentaje(habilidades.getPorcentaje());
+        return habilidadesRepository.save(habilidades);
+    }
+
     @DeleteMapping("/eliminar/{id}")
-    public void eliminar(@PathVariable(value="id") Long habilidadesId) {
+    public void eliminar(@PathVariable(value = "id") Long habilidadesId) {
         Habilidades habilidades = habilidadesRepository.findById(habilidadesId).orElse(null);
         habilidadesRepository.delete(habilidades);
     }

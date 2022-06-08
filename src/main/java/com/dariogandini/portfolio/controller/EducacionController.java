@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,6 +31,17 @@ public class EducacionController {
 
     @PostMapping("/agregar")
     public Educacion agregar(@RequestBody Educacion educacion) {
+        return educacionRepository.save(educacion);
+    }
+
+    @PutMapping("/editar/{id}")
+    public Educacion editar(@PathVariable(value = "id") Long educacionId) {
+        Educacion educacion = educacionRepository.findById(educacionId).orElse(null);
+        educacion.setTitulo(educacion.getTitulo());
+        educacion.setInstitucion(educacion.getInstitucion());
+        educacion.setFecha(educacion.getFecha());
+        educacion.setDuracion(educacion.getDuracion());
+        educacion.setLogo(educacion.getLogo());
         return educacionRepository.save(educacion);
     }
 
