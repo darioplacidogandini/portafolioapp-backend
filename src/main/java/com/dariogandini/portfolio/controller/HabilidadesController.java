@@ -46,7 +46,8 @@ public class HabilidadesController {
         Habilidades habilidades = habilidadesRepository.findById(habilidadesId).orElse(null);
         habilidades.setHabilidad(habilidades.getHabilidad());
         habilidades.setPorcentaje(habilidades.getPorcentaje());
-        return habilidadesRepository.save(habilidades);
+        Habilidades habilidadModificada = habilidadesRepository.save(habilidades);
+        return habilidadesRepository.save(habilidadModificada);
     }
 
     @DeleteMapping("/eliminar/{id}")
