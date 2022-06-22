@@ -4,8 +4,6 @@ import java.util.List;
 
 import com.dariogandini.portfolio.model.Educacion;
 import com.dariogandini.portfolio.repository.EducacionRepository;
-import com.dariogandini.portfolio.repository.ExperienciaRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
