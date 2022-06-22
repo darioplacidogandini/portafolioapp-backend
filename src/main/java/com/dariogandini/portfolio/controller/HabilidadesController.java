@@ -6,6 +6,7 @@ import com.dariogandini.portfolio.model.Habilidades;
 import com.dariogandini.portfolio.repository.HabilidadesRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,6 +33,12 @@ public class HabilidadesController {
     @PostMapping("/agregar")
     public Habilidades agregar(@RequestBody Habilidades habilidades) {
         return habilidadesRepository.save(habilidades);
+    }
+
+    @GetMapping("/buscar/{id}")
+    public ResponseEntity<Habilidades> buscar(@PathVariable Long id) {
+        Habilidades habilidades = habilidadesRepository.findById(id).orElse(null);
+        return ResponseEntity.ok(habilidades);
     }
 
     @PutMapping("/editar/{id}")
