@@ -41,13 +41,13 @@ public class EducacionController {
     }
 
     @PutMapping("/editar/{id}")
-    public ResponseEntity<Educacion> editar(@PathVariable(value = "id") Long educacionId) {
-        Educacion educacion = educacionRepository.findById(educacionId).orElse(null);
-        educacion.setTitulo(educacion.getTitulo());
-        educacion.setInstitucion(educacion.getInstitucion());
-        educacion.setFecha(educacion.getFecha());
-        educacion.setDuracion(educacion.getDuracion());
-        educacion.setLogo(educacion.getLogo());
+    public ResponseEntity<Educacion> editar(@PathVariable Long id, @RequestBody Educacion detallesEducacion) {
+        Educacion educacion = educacionRepository.findById(id).orElse(null);
+        educacion.setTitulo(detallesEducacion.getTitulo());
+        educacion.setInstitucion(detallesEducacion.getInstitucion());
+        educacion.setFecha(detallesEducacion.getFecha());
+        educacion.setDuracion(detallesEducacion.getDuracion());
+        educacion.setLogo(detallesEducacion.getLogo());
         Educacion educacionModificada = educacionRepository.save(educacion);
         return ResponseEntity.ok(educacionModificada);
     }

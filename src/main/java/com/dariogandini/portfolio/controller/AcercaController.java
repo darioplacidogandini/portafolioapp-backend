@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,13 +28,19 @@ public class AcercaController {
         return acercaRepository.findAll();
     }
 
+    @GetMapping("/buscar/{id}")
+    public ResponseEntity<Acerca> buscar(@PathVariable Long id) {
+        Acerca acerca = acercaRepository.findById(id).orElse(null);
+        return ResponseEntity.ok(acerca);
+    }
+
     @PutMapping("/editar")
-    public ResponseEntity<Acerca> editar() {
-        Acerca acerca = acercaRepository.findById((long) 1).orElse(null);
-        acerca.setNombre(acerca.getNombre());
-        acerca.setPuesto(acerca.getPuesto());
-        acerca.setFoto(acerca.getFoto());
-        acerca.setPortada(acerca.getPortada());
+    public ResponseEntity<Acerca> editar(@PathVariable Long id, @RequestBody Acerca detallesAcerca) {
+        Acerca acerca = acercaRepository.findById(id).orElse(null);
+        acerca.setNombre(detallesAcerca.getNombre());
+        acerca.setPuesto(detallesAcerca.getPuesto());
+        acerca.setFoto(detallesAcerca.getFoto());
+        acerca.setPortada(detallesAcerca.getPortada());
         Acerca acercaModificado = acercaRepository.save(acerca);
         return ResponseEntity.ok(acercaModificado);
     }

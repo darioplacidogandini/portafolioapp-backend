@@ -42,10 +42,10 @@ public class HabilidadesController {
     }
 
     @PutMapping("/editar/{id}")
-    public ResponseEntity<Habilidades> editar(@PathVariable(value = "id") Long habilidadesId) {
-        Habilidades habilidades = habilidadesRepository.findById(habilidadesId).orElse(null);
-        habilidades.setHabilidad(habilidades.getHabilidad());
-        habilidades.setPorcentaje(habilidades.getPorcentaje());
+    public ResponseEntity<Habilidades> editar(@PathVariable Long id, @RequestBody Habilidades habilidad) {
+        Habilidades habilidades = habilidadesRepository.findById(id).orElse(null);
+        habilidades.setHabilidad(habilidad.getHabilidad());
+        habilidades.setPorcentaje(habilidad.getPorcentaje());
         Habilidades habilidadModificada = habilidadesRepository.save(habilidades);
         return ResponseEntity.ok(habilidadModificada);
     }
