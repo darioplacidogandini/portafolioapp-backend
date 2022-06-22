@@ -34,7 +34,7 @@ public class AcercaController {
         return ResponseEntity.ok(acerca);
     }
 
-    @PutMapping("/editar")
+    @PutMapping("/editar/{id}")
     public ResponseEntity<Acerca> editar(@PathVariable Long id, @RequestBody Acerca detallesAcerca) {
         Acerca acerca = acercaRepository.findById(id).orElse(null);
         acerca.setNombre(detallesAcerca.getNombre());
