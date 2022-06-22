@@ -6,6 +6,7 @@ import com.dariogandini.portfolio.model.Acerca;
 import com.dariogandini.portfolio.repository.AcercaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -26,13 +27,14 @@ public class AcercaController {
     }
 
     @PutMapping("/editar")
-    public Acerca editar() {
+    public ResponseEntity<Acerca> editar() {
         Acerca acerca = acercaRepository.findById((long) 1).orElse(null);
         acerca.setNombre(acerca.getNombre());
         acerca.setPuesto(acerca.getPuesto());
         acerca.setFoto(acerca.getFoto());
         acerca.setPortada(acerca.getPortada());
-        return acercaRepository.save(acerca);
+        Acerca acercaModificado = acercaRepository.save(acerca);
+        return ResponseEntity.ok(acercaModificado);
     }
 
 }

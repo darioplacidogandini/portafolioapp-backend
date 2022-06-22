@@ -30,24 +30,24 @@ public class HabilidadesController {
         return habilidadesRepository.findAll();
     }
 
-    @PostMapping("/agregar")
-    public Habilidades agregar(@RequestBody Habilidades habilidades) {
-        return habilidadesRepository.save(habilidades);
-    }
-
     @GetMapping("/buscar/{id}")
     public ResponseEntity<Habilidades> buscar(@PathVariable Long id) {
         Habilidades habilidades = habilidadesRepository.findById(id).orElse(null);
         return ResponseEntity.ok(habilidades);
     }
 
+    @PostMapping("/agregar")
+    public Habilidades agregar(@RequestBody Habilidades habilidades) {
+        return habilidadesRepository.save(habilidades);
+    }
+
     @PutMapping("/editar/{id}")
-    public Habilidades editar(@PathVariable(value = "id") Long habilidadesId) {
+    public ResponseEntity<Habilidades> editar(@PathVariable(value = "id") Long habilidadesId) {
         Habilidades habilidades = habilidadesRepository.findById(habilidadesId).orElse(null);
         habilidades.setHabilidad(habilidades.getHabilidad());
         habilidades.setPorcentaje(habilidades.getPorcentaje());
         Habilidades habilidadModificada = habilidadesRepository.save(habilidades);
-        return habilidadesRepository.save(habilidadModificada);
+        return ResponseEntity.ok(habilidadModificada);
     }
 
     @DeleteMapping("/eliminar/{id}")

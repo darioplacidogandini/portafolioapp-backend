@@ -4,8 +4,10 @@ import java.util.List;
 
 import com.dariogandini.portfolio.model.Educacion;
 import com.dariogandini.portfolio.repository.EducacionRepository;
+import com.dariogandini.portfolio.repository.ExperienciaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,20 +31,27 @@ public class EducacionController {
         return educacionRepository.findAll();
     }
 
+    @GetMapping("/buscar/{id}")
+    public ResponseEntity<Educacion> buscar(@PathVariable Long id) {
+        Educacion educacion = educacionRepository.findById(id).orElse(null);
+        return ResponseEntity.ok(educacion);
+    }
+
     @PostMapping("/agregar")
     public Educacion agregar(@RequestBody Educacion educacion) {
         return educacionRepository.save(educacion);
     }
 
     @PutMapping("/editar/{id}")
-    public Educacion editar(@PathVariable(value = "id") Long educacionId) {
+    public ResponseEntity<Educacion> editar(@PathVariable(value = "id") Long educacionId) {
         Educacion educacion = educacionRepository.findById(educacionId).orElse(null);
         educacion.setTitulo(educacion.getTitulo());
         educacion.setInstitucion(educacion.getInstitucion());
         educacion.setFecha(educacion.getFecha());
         educacion.setDuracion(educacion.getDuracion());
         educacion.setLogo(educacion.getLogo());
-        return educacionRepository.save(educacion);
+        Educacion educacionModificada = educacionRepository.save(educacion);
+        return ResponseEntity.ok(educacionModificada);
     }
 
     @DeleteMapping("/eliminar/{id}")

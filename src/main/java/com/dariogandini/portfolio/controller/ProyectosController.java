@@ -6,6 +6,7 @@ import com.dariogandini.portfolio.model.Proyectos;
 import com.dariogandini.portfolio.repository.ProyectosRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,19 +30,26 @@ public class ProyectosController {
         return proyectosRepository.findAll();
     }
 
+    @GetMapping("/buscar/{id}")
+    public ResponseEntity<Proyectos> buscar(@PathVariable Long id) {
+        Proyectos proyectos = proyectosRepository.findById(id).orElse(null);
+        return ResponseEntity.ok(proyectos);
+    }
+
     @PostMapping("/agregar")
     public Proyectos agregar(@RequestBody Proyectos proyectos) {
         return proyectosRepository.save(proyectos);
     }
 
     @PutMapping("/editar/{id}")
-    public Proyectos editar(@PathVariable(value = "id") Long proyectosId) {
+    public ResponseEntity<Proyectos> editar(@PathVariable(value = "id") Long proyectosId) {
         Proyectos proyectos = proyectosRepository.findById(proyectosId).orElse(null);
         proyectos.setNombre(proyectos.getNombre());
         proyectos.setDescripcion(proyectos.getDescripcion());
         proyectos.setLogo(proyectos.getDescripcion());
         proyectos.setUrl(proyectos.getUrl());
-        return proyectosRepository.save(proyectos);
+        Proyectos proyectoModificado = proyectosRepository.save(proyectos);
+        return ResponseEntity.ok(proyectoModificado);
     }
 
     @DeleteMapping("/eliminar/{id}")

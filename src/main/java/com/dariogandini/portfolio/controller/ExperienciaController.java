@@ -6,6 +6,7 @@ import com.dariogandini.portfolio.model.Experiencia;
 import com.dariogandini.portfolio.repository.ExperienciaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,20 +30,27 @@ public class ExperienciaController {
         return experienciaRepository.findAll();
     }
 
+    @GetMapping("/buscar/{id}")
+    public ResponseEntity<Experiencia> buscar(@PathVariable Long id) {
+        Experiencia experiencia = experienciaRepository.findById(id).orElse(null);
+        return ResponseEntity.ok(experiencia);
+    }
+
     @PostMapping("/agregar")
     public Experiencia agregar(@RequestBody Experiencia experiencia) {
         return experienciaRepository.save(experiencia);
     }
 
     @PutMapping("/editar/{id}")
-    public Experiencia editar(@PathVariable(value = "id") Long experienciaId) {
+    public ResponseEntity<Experiencia> editar(@PathVariable(value = "id") Long experienciaId) {
         Experiencia experiencia = experienciaRepository.findById(experienciaId).orElse(null);
         experiencia.setEmpresa(experiencia.getEmpresa());
         experiencia.setPuesto(experiencia.getPuesto());
         experiencia.setInicio(experiencia.getInicio());
         experiencia.setFin(experiencia.getFin());
         experiencia.setLogo(experiencia.getLogo());
-        return experienciaRepository.save(experiencia);
+        Experiencia experienciaModificada = experienciaRepository.save(experiencia);
+        return ResponseEntity.ok(experienciaModificada);
     }
 
     @DeleteMapping("/eliminar/{id}")
