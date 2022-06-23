@@ -46,7 +46,7 @@ public class ProyectosController {
         Proyectos proyectos = proyectosRepository.findById(id).orElse(null);
         proyectos.setNombre(proyecto.getNombre());
         proyectos.setDescripcion(proyecto.getDescripcion());
-        proyectos.setLogo(proyecto.getDescripcion());
+        proyectos.setLogo(proyecto.getLogo());
         proyectos.setUrl(proyecto.getUrl());
         Proyectos proyectoModificado = proyectosRepository.save(proyectos);
         return ResponseEntity.ok(proyectoModificado);
