@@ -42,7 +42,7 @@ public class ProyectosController {
     }
 
     @PutMapping("/editar/{id}")
-    public ResponseEntity<Proyectos> editar(@PathVariable Long id, @PathVariable Proyectos proyecto) {
+    public ResponseEntity<Proyectos> editar(@PathVariable Long id, @RequestBody Proyectos proyecto) {
         Proyectos proyectos = proyectosRepository.findById(id).orElse(null);
         proyectos.setNombre(proyecto.getNombre());
         proyectos.setDescripcion(proyecto.getDescripcion());
