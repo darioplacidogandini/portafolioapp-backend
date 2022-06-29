@@ -48,6 +48,7 @@ public class ProyectosController {
         proyectos.setDescripcion(proyecto.getDescripcion());
         proyectos.setLogo(proyecto.getLogo());
         proyectos.setUrl(proyecto.getUrl());
+        proyectos.setCodigoFuente(proyecto.getCodigoFuente());
         Proyectos proyectoModificado = proyectosRepository.save(proyectos);
         return ResponseEntity.ok(proyectoModificado);
     }

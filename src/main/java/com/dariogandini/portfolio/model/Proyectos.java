@@ -17,16 +17,18 @@ public class Proyectos {
     private String nombre;
     private String descripcion;
     private String url;
+    private String codigoFuente;
     private String logo;
 
     public Proyectos() {
         
     }
 
-    public Proyectos(String nombre, String descripcion, String url, String logo) {
+    public Proyectos(String nombre, String descripcion, String url, String codigoFuente, String logo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.url = url;
+        this.codigoFuente = codigoFuente;
         this.logo = logo;
     }
 
@@ -64,6 +66,15 @@ public class Proyectos {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    @Column(name = "codigo")
+    public String getCodigoFuente() {
+        return codigoFuente;
+    }
+
+    public void setCodigoFuente(String codigoFuente) {
+        this.codigoFuente = codigoFuente;
     }
 
     public String getLogo() {
