@@ -54,7 +54,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				
 				.authorizeRequests().antMatchers
 				("/api/login","/api/acerca/listar","/api/experiencia/listar","/api/educacion/listar",
-				"/api/habilidades/listar","/api/proyectos/listar","/api/acerca/editar","/api/experiencia/editar","/api/educacion/editar",
+				"/api/habilidades/listar","/api/proyectos/listar","/api/acerca/buscar","/api/experiencia/buscar","/api/educacion/buscar",
+				"/api/habilidades/buscar","/api/proyectos/buscar","/api/acerca/agregar","/api/experiencia/agregar","/api/educacion/agregar",
+				"/api/habilidades/agregar","/api/proyectos/agregar","/api/acerca/editar","/api/experiencia/editar","/api/educacion/editar",
 				"/api/habilidades/editar","/api/proyectos/editar","/api/experiencia/eliminar","/api/educacion/eliminar",
 				"/api/habilidades/eliminar","/api/proyectos/eliminar").
 				permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
