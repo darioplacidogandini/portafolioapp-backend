@@ -54,11 +54,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				
 				.authorizeRequests().antMatchers
 				("/api/login","/api/acerca/listar","/api/experiencia/listar","/api/educacion/listar",
-				"/api/habilidades/listar","/api/proyectos/listar","/api/acerca/buscar","/api/experiencia/buscar","/api/educacion/buscar",
-				"/api/habilidades/buscar","/api/proyectos/buscar","/api/acerca/agregar","/api/experiencia/agregar","/api/educacion/agregar",
-				"/api/habilidades/agregar","/api/proyectos/agregar","/api/acerca/editar","/api/experiencia/editar","/api/educacion/editar",
-				"/api/habilidades/editar","/api/proyectos/editar","/api/experiencia/eliminar","/api/educacion/eliminar",
-				"/api/habilidades/eliminar","/api/proyectos/eliminar").
+				"/api/habilidades/listar","/api/proyectos/listar","/api/acerca/buscar/{^[\\d]$}","/api/experiencia/buscar/{^[\\d]$}","/api/educacion/buscar/{^[\\d]$}",
+				"/api/habilidades/buscar/{^[\\d]$}","/api/proyectos/buscar/{^[\\d]$}","/api/acerca/agregar","/api/experiencia/agregar","/api/educacion/agregar",
+				"/api/habilidades/agregar","/api/proyectos/agregar","/api/acerca/editar/{^[\\d]$}","/api/experiencia/editar/{^[\\d]$}","/api/educacion/editar/{^[\\d]$}",
+				"/api/habilidades/editar/{^[\\d]$}","/api/proyectos/editar/{^[\\d]$}","/api/experiencia/eliminar/{^[\\d]$}","/api/educacion/eliminar/{^[\\d]$}",
+				"/api/habilidades/eliminar/{^[\\d]$}","/api/proyectos/eliminar/{^[\\d]$}").
 				permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
 				.permitAll().
 				
