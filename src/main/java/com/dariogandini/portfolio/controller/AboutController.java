@@ -42,7 +42,7 @@ public class AboutController {
         about.setName(aboutDetails.getName());
         about.setJob(aboutDetails.getJob());
         about.setProfilePhoto(aboutDetails.getProfilePhoto());
-        about.setProfilePhoto(aboutDetails.getProfilePhoto());
+        about.setHeaderImage(aboutDetails.getHeaderImage());
         About editedAbout = aboutRepository.save(about);
         return ResponseEntity.ok(editedAbout);
     }
