@@ -43,13 +43,13 @@ public class ProjectsController {
     }
 
     @PutMapping("/edit/{id}")
-    public ResponseEntity<Projects> edit(@PathVariable Long id, @RequestBody Projects project) {
+    public ResponseEntity<Projects> edit(@PathVariable Long id, @RequestBody Projects projectDetails) {
         Projects projects = projectsRepository.findById(id).orElse(null);
-        projects.setProjectName(project.getProjectName());
-        projects.setDescription(project.getDescription());
-        projects.setProjectLogo(project.getProjectLogo());
-        projects.setProjectURL(project.getProjectURL());
-        projects.setSourceCode(project.getSourceCode());
+        projects.setProjectName(projectDetails.getProjectName());
+        projects.setDescription(projectDetails.getDescription());
+        projects.setProjectLogo(projectDetails.getProjectLogo());
+        projects.setProjectURL(projectDetails.getProjectURL());
+        projects.setSourceCode(projectDetails.getSourceCode());
         Projects proyectoModificado = projectsRepository.save(projects);
         return ResponseEntity.ok(proyectoModificado);
     }
