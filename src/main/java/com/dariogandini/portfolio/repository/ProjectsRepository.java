@@ -1,11 +1,9 @@
 package com.dariogandini.portfolio.repository;
 
+import com.dariogandini.portfolio.model.Projects;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.dariogandini.portfolio.model.Educacion;
-
 @Repository
-public interface EducacionRepository extends JpaRepository<Educacion, Long> {
-
-}
+public interface ProjectsRepository extends JpaRepository<Projects, Long> {}

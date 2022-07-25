@@ -49,24 +49,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
-		
-		httpSecurity.csrf().disable()
-				
-				.authorizeRequests().antMatchers
-				("/api/login","/api/acerca/listar","/api/experiencia/listar","/api/educacion/listar",
-				"/api/habilidades/listar","/api/proyectos/listar","/api/acerca/buscar/{^[\\d]$}","/api/experiencia/buscar/{^[\\d]$}","/api/educacion/buscar/{^[\\d]$}",
-				"/api/habilidades/buscar/{^[\\d]$}","/api/proyectos/buscar/{^[\\d]$}","/api/acerca/agregar","/api/experiencia/agregar","/api/educacion/agregar",
-				"/api/habilidades/agregar","/api/proyectos/agregar","/api/acerca/editar/{^[\\d]$}","/api/experiencia/editar/{^[\\d]$}","/api/educacion/editar/{^[\\d]$}",
-				"/api/habilidades/editar/{^[\\d]$}","/api/proyectos/editar/{^[\\d]$}","/api/experiencia/eliminar/{^[\\d]$}","/api/educacion/eliminar/{^[\\d]$}",
-				"/api/habilidades/eliminar/{^[\\d]$}","/api/proyectos/eliminar/{^[\\d]$}").
-				permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
-				.permitAll().
-				
-				anyRequest().authenticated().and().
-			
-				exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
-				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-
+		httpSecurity.csrf().disable().authorizeRequests().antMatchers
+		("/api/login","/api/about/list","/api/experience/list","/api/education/list",
+		"/api/habilities/list","/api/projects/list","/api/about/search/{^[\\d]$}","/api/experience/search/{^[\\d]$}","/api/education/search/{^[\\d]$}",
+		"/api/habilities/search/{^[\\d]$}","/api/projects/search/{^[\\d]$}","/api/about/add","/api/experience/add","/api/education/add",
+		"/api/habilities/add","/api/projects/add","/api/about/edit/{^[\\d]$}","/api/experience/edit/{^[\\d]$}","/api/education/edit/{^[\\d]$}",
+		"/api/habilities/edit/{^[\\d]$}","/api/projects/edit/{^[\\d]$}","/api/experience/delete/{^[\\d]$}","/api/education/delete/{^[\\d]$}",
+		"/api/habilities/delete/{^[\\d]$}","/api/projects/delete/{^[\\d]$}").
+		permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
+		.permitAll().anyRequest().authenticated().and().
+		exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
+		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 	}
 }

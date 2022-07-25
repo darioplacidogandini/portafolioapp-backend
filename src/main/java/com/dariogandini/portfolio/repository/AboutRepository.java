@@ -1,11 +1,9 @@
 package com.dariogandini.portfolio.repository;
 
-import com.dariogandini.portfolio.model.Habilidades;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.dariogandini.portfolio.model.About;
+
 @Repository
-public interface HabilidadesRepository extends JpaRepository<Habilidades, Long> {
-    
-}
+public interface AboutRepository extends JpaRepository<About, Long> {}

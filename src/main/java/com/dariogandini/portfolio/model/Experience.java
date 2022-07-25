@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "experiencia")
-public class Experiencia {
+@Table(name = "experience")
+public class Experience {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,11 +21,11 @@ public class Experiencia {
     private String inicio;
     private String fin;
 
-    public Experiencia() {
+    public Experience() {
 
     }
 
-    public Experiencia(String empresa, String puesto, String logo, String inicio, String fin) {
+    public Experience(String empresa, String puesto, String logo, String inicio, String fin) {
         this.empresa = empresa;
         this.puesto = puesto;
         this.logo = logo;
