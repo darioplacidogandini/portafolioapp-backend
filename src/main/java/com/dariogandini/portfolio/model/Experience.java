@@ -15,23 +15,13 @@ public class Experience {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String empresa;
-    private String puesto;
-    private String logo;
-    private String inicio;
-    private String fin;
+    private String company;
+    private String job;
+    private String companyLogo;
+    private String start;
+    private String end;
 
-    public Experience() {
-
-    }
-
-    public Experience(String empresa, String puesto, String logo, String inicio, String fin) {
-        this.empresa = empresa;
-        this.puesto = puesto;
-        this.logo = logo;
-        this.inicio = inicio;
-        this.fin = fin;
-    }
+    public Experience() {}
 
     @Column(name = "id")
     public long getId() {
@@ -42,49 +32,50 @@ public class Experience {
         this.id = id;
     }
 
-    @Column(name = "empresa")
-    public String getEmpresa() {
-        return empresa;
+    @Column(name = "company")
+    public String getCompany() {
+        return company;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
-    @Column(name = "puesto")
-    public String getPuesto() {
-        return puesto;
+    @Column(name = "job")
+    public String getJob() {
+        return job;
     }
 
-    public void setPuesto(String puesto) {
-        this.puesto = puesto;
+    public void setJob(String job) {
+        this.job = job;
     }
 
-    @Column(name = "logo")
-    public String getLogo() {
-        return logo;
+    @Column(name = "company-logo")
+    public String getCompanyLogo() {
+        return companyLogo;
     }
 
-    public void setLogo(String logo) {
-        this.logo = logo;
+    public void setCompanyLogo(String companyLogo) {
+        this.companyLogo = companyLogo;
     }
 
-    @Column(name = "inicio")
-    public String getInicio() {
-        return inicio;
+    @Column(name = "start-date")
+    public String getStart() {
+        return start;
     }
 
-    public void setInicio(String inicio) {
-        this.inicio = inicio;
+    public void setStart(String start) {
+        this.start = start;
     }
 
-    @Column(name = "fin")
-    public String getFin() {
-        return fin;
+    @Column(name = "end-date")
+    public String getEnd() {
+        return end;
     }
 
-    public void setFin(String fin) {
-        this.fin = fin;
+    public void setEnd(String end) {
+        this.end = end;
     }
- 
+
+    
 }

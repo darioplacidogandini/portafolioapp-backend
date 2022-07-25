@@ -45,11 +45,11 @@ public class ExperienceController {
     @PutMapping("/edit/{id}")
     public ResponseEntity<Experience> edit(@PathVariable Long id, @RequestBody Experience detallesExperiencia) {
         Experience experience = experienciaRepository.findById(id).orElse(null);
-        experience.setEmpresa(detallesExperiencia.getEmpresa());
-        experience.setPuesto(detallesExperiencia.getPuesto());
-        experience.setInicio(detallesExperiencia.getInicio());
-        experience.setFin(detallesExperiencia.getFin());
-        experience.setLogo(detallesExperiencia.getLogo());
+        experience.setCompany(detallesExperiencia.getCompany());
+        experience.setJob(detallesExperiencia.getJob());
+        experience.setStart(detallesExperiencia.getStart());
+        experience.setEnd(detallesExperiencia.getEnd());
+        experience.setCompanyLogo(detallesExperiencia.getCompanyLogo());
         Experience experienciaModificada = experienciaRepository.save(experience);
         return ResponseEntity.ok(experienciaModificada);
     }
