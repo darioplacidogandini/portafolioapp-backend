@@ -50,12 +50,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.csrf().disable().authorizeRequests().antMatchers
-		("/api/login","/api/about/list","/api/experience/list","/api/education/list",
-		"/api/habilities/list","/api/projects/list","/api/about/search/{^[\\d]$}","/api/experience/search/{^[\\d]$}","/api/education/search/{^[\\d]$}",
-		"/api/habilities/search/{^[\\d]$}","/api/projects/search/{^[\\d]$}","/api/about/add","/api/experience/add","/api/education/add",
-		"/api/habilities/add","/api/projects/add","/api/about/edit/{^[\\d]$}","/api/experience/edit/{^[\\d]$}","/api/education/edit/{^[\\d]$}",
-		"/api/habilities/edit/{^[\\d]$}","/api/projects/edit/{^[\\d]$}","/api/experience/delete/{^[\\d]$}","/api/education/delete/{^[\\d]$}",
-		"/api/habilities/delete/{^[\\d]$}","/api/projects/delete/{^[\\d]$}").
+		("/api/login","/api/afiliados/list","/api/afiliados/add","/api/afiliados/delete/{^[\\d]$}",
+		"/api/afiliados/search/{^[\\d]$}").
 		permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
 		.permitAll().anyRequest().authenticated().and().
 		exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
