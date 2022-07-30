@@ -50,8 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.csrf().disable().authorizeRequests().antMatchers
-		("/api/login","/api/afiliados/list","/api/afiliados/add","/api/afiliados/delete/{^[\\d]$}",
-		"/api/afiliados/search/{^[\\d]$}").
+		("/api/login","/api/about/list","/api/about/search/{^[\\d]$}","/api/about/delete/{^[\\d]$}").
 		permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
 		.permitAll().anyRequest().authenticated().and().
 		exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
