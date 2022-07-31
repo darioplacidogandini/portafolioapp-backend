@@ -50,8 +50,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.csrf().disable().authorizeRequests().antMatchers
-		("/api/login","/api/about/list","/api/about/search/{^[\\d]$}","/api/about/delete/{^[\\d]$}").
-		permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
+		("/api/login","/api/about/list","/api/about/search/{^[\\d]$}","/api/about/edit/{^[\\d]$}","/api/about/delete/{^[\\d]$}",
+		"/api/experience/list","/api/experience/search/{^[\\d]$}","/api/experience/add","/api/experience/edit/{^[\\d]$}","/api/experience/delete/{^[\\d]$})",
+		"/api/education/list","/api/education/search/{^[\\d]$}","/api/education/add","/api/education/edit/{^[\\d]$}","/api/education/delete/{^[\\d]$})",
+		"/api/habilities/list","/api/habilities/search/{^[\\d]$}","/api/habilities/add","/api/habilities/edit/{^[\\d]$}","/api/habilities/delete/{^[\\d]$})",
+		"/api/projects/list","/api/projects/search/{^[\\d]$}","/api/projects/add","/api/projects/edit/{^[\\d]$}","/api/projects/delete/{^[\\d]$})")
+		.permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
 		.permitAll().anyRequest().authenticated().and().
 		exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
 		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
