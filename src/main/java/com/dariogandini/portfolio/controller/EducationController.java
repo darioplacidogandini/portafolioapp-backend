@@ -38,8 +38,8 @@ public class EducationController {
     }
 
     @PostMapping("/add")
-	public Education add(@RequestBody Education experience) {
-		return educationRepository.save(experience);
+	public Education add(@RequestBody Education education) {
+		return educationRepository.save(education);
 	}
 
     @PutMapping("/edit/{id}")
@@ -57,7 +57,7 @@ public class EducationController {
 
     @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable(value="id") Long id) {
-        Education experience = educationRepository.findById(id).orElse(null);
-        educationRepository.delete(experience);
+        Education education = educationRepository.findById(id).orElse(null);
+        educationRepository.delete(education);
     }
 }
