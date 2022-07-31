@@ -47,6 +47,7 @@ public class ExperienceController {
     @RequestBody Experience experienceDetails) {
         Experience experience = experienceRepository.findById(id).orElse(null);
         experience.setCompany(experienceDetails.getCompany());
+        experience.setCompanyLogo(experienceDetails.getCompanyLogo());
         experience.setJob(experienceDetails.getJob());
         experience.setStart(experienceDetails.getStart());
         experience.setEnd(experienceDetails.getEnd());
