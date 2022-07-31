@@ -20,6 +20,8 @@ public class About {
     private String name;
     private String job;
 
+    public About() {}
+
     public About(long id, String profilePhoto, String headerImage, String name, String job) {
         this.id = id;
         this.profilePhoto = profilePhoto;

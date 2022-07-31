@@ -21,6 +21,8 @@ public class Education {
     private String duration;
     private String institutionLogo;
 
+    public Education() {}
+
     public Education(long id, String title, String institution, 
     String date, String duration, String institutionLogo) {
         this.id = id;

@@ -11,8 +11,11 @@ public class Habilities {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    String hability;
-    String percentage;
+    private String hability;
+    private String percentage;
+
+    public Habilities() {}
+
     public Habilities(long id, String hability, String percentage) {
         this.id = id;
         this.hability = hability;

@@ -11,11 +11,14 @@ public class Projects {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    String projectName;
-    String description;
-    String projectURL;
-    String sourceCode;
-    String projectLogo;
+    private String projectName;
+    private String description;
+    private String projectURL;
+    private String sourceCode;
+    private String projectLogo;
+
+    public Projects() {}
+
     public Projects(long id, String projectName, String description, 
     String projectURL, String sourceCode, String projectLogo) {
         this.id = id;

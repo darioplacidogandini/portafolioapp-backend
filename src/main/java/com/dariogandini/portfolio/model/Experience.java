@@ -21,6 +21,8 @@ public class Experience {
     private String end; 
     private String companyLogo;
 
+    public Experience() {}
+
     public Experience(long id, String company, String job, String start, 
     String end, String companyLogo) {
         this.id = id;
