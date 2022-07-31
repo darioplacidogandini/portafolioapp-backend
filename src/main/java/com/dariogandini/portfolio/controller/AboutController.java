@@ -49,8 +49,8 @@ public class AboutController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable(value="id") Long aboutId) {
-        About about = aboutRepository.findById(aboutId).orElse(null);
+    public void delete(@PathVariable(value="id") Long id) {
+        About about = aboutRepository.findById(id).orElse(null);
         aboutRepository.delete(about);
     }
 }
